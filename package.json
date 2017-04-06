@@ -29,7 +29,8 @@
     "saucelabs": "1.2.0",
     "webdriverio": "3.2.6",
     "colors":"1.1.2",
-    "diff": "1.4.0"
+    "diff": "1.4.0",
+    "mocha": "3.2.0"
   },
   "devDependencies": {
     "npm-k3po": "https://github.com/dpwspoon/npm-k3po#develop",
