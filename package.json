@@ -1,0 +1,42 @@
+{
+  "name": "k3po-mocha.js",
+  "version": "0.1.0",
+  "description": "Mocha UI for using K3PO as a test platform",
+  "main": "k3po-ui.js",
+  "scripts": {
+    "lint": "jshint lib/**/*.js",
+    "pretest": "npm run lint && node ./node_modules/k3po-exec/k3po-exec.js --pom ./test/pom.xml --log ./builds/k3po-test.log --pidFile ./builds/k3po-test.pid start",
+    "test": "mocha --require k3po-ui --ui k3po-ui.js",
+    "posttest": "node ./node_modules/k3po-exec/k3po-exec.js stop --pidFile ./builds/k3po-test.pid"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k3po/mocha-k3po.js.git"
+  },
+  "keywords": [
+    "mocha",
+    "k3po",
+    "ui",
+    "k3po-ui"
+  ],
+  "author": "k3po developers",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/k3po/mocha-k3po.js/issues"
+  },
+  "dependencies": {
+    "k3po-control": "https://github.com/dpwspoon/k3po-control.js#develop",
+    "saucelabs": "1.2.0",
+    "webdriverio": "3.2.6",
+    "colors":"1.1.2",
+    "diff": "1.4.0",
+    "mocha": "3.2.0"
+  },
+  "devDependencies": {
+    "npm-k3po": "https://github.com/dpwspoon/npm-k3po#develop",
+    "chai": "3.5.0",
+    "websocket": "1.0.22",
+    "jshint": "2.9.4"
+  },
+  "homepage": "https://github.com/k3po/mocha-k3po.js#readme"
+}
